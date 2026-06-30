@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razer Viper V3 Pro - Sentinels Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600&family=Syncopate:wght@700&family=Unbounded:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader Overlay -->
+    <div id="preloader" class="preloader-overlay">
+        <div class="loader-content">
+            <div class="glow-logo">
+                <span class="logo-text-sen">SENTINELS</span>
+                <span class="logo-divider">|</span>
+                <span class="logo-text-razer">RAZER</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar-glow"></div>
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+            <div class="loading-stats">
+                <span id="loading-percentage">0%</span>
+                <span class="loading-text">PRELOADING SYSTEM ASSETS</span>
+            </div>
+            <div class="loading-subtitle">Optimizing frame buffers for Viper V3 Pro Sentinels Edition</div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="brand-logos">
+                <span class="brand-sen">SENTINELS</span>
+                <span class="brand-divider">|</span>
+                <span class="brand-razer">RAZER</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-buy">BUY NOW</a>
+                <button class="menu-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top Hero Section: Sticky Scroll Frame Animation -->
+    <section class="hero-scroll-container" id="hero">
+        <div class="sticky-viewport">
+            <canvas id="animation-canvas"></canvas>
+            <div class="vignette-overlay" id="vignette"></div>
+            
+            <!-- Cinematic Text Overlays scrolling over the canvas -->
+            <div class="hero-text-overlays">
+                <div class="text-overlay active" id="hero-text-1">
+                    <span class="overlay-eyebrow">LIMITED EDITION</span>
+                    <h2 class="overlay-title">VIPER V3 <span class="accent-text">PRO</span></h2>
+                    <p class="overlay-desc">SENTINELS EDITION</p>
+                </div>
+                <div class="text-overlay" id="hero-text-2">
+                    <span class="overlay-eyebrow">LIGHTWEIGHT DOMINANCE</span>
+                    <h2 class="overlay-title">54G <span class="accent-text">ULTRA-LIGHT</span></h2>
+                    <p class="overlay-desc">Designed with pros. Refined for speed, precision, and zero-fatigue tactical control.</p>
+                </div>
+                <div class="text-overlay" id="hero-text-3">
+                    <span class="overlay-eyebrow">TACTICAL ACCURACY</span>
+                    <h2 class="overlay-title">FOCUS PRO <span class="accent-text">35K</span></h2>
+                    <p class="overlay-desc">Optical Sensor Gen-2 with 99.8% resolution accuracy for pixel-perfect flicks.</p>
+                </div>
+                <div class="text-overlay" id="hero-text-4">
+                    <span class="overlay-eyebrow">LATENCY FREE SPEED</span>
+                    <h2 class="overlay-title">8KHZ <span class="accent-text">HYPERPOLLING</span></h2>
+                    <p class="overlay-desc">True 8000Hz wireless polling rate. Near-zero latency with up to 95 hours battery runtime.</p>
+                </div>
+            </div>
+
+            <!-- Scroll Prompt Indicator -->
+            <div class="scroll-cue" id="scroll-prompt-indicator">
+                <span class="cue-text">SCROLL TO ROTATE</span>
+                <div class="cue-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Content Container (Below the Scroll Animation) -->
+    <div class="details-container">
+        
+        <!-- Red Glowing Topographic Background Pattern Layer -->
+        <div class="topo-bg-layer"></div>
+
+        <!-- Section 1: Designed by Sentinels Branding -->
+        <section class="details-section branding-showcase" id="branding">
+            <div class="section-content-wrapper">
+                <span class="section-eyebrow">LIMITED COLLABORATION</span>
+                <h2 class="branding-title">DESIGNED BY <span class="accent-text">SENTINELS</span></h2>
+                <p class="branding-description">
+                    Featuring the iconic red and topographic pattern, this edition represents the tactical precision and unrelenting hunger for victory that defines SEN City. Built in collaboration with world-class players to achieve esports dominance.
+                </p>
+                <div class="btn-group">
+                    <button class="btn-pill outline">
+                        <span class="btn-icon">✓</span> PRO TESTED
+                    </button>
+                    <button class="btn-pill outline">
+                        <span class="btn-icon">〰</span> TOPO PRINT
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Pro-Grade Performance Subsections -->
+        <section class="details-section performance-highlights">
+            <div class="section-content-wrapper">
+                <h2 class="section-title">PRO-GRADE <span class="accent-text">PERFORMANCE</span></h2>
+                <p class="section-intro-desc">Engineered to outperform. Built with cutting-edge internal modules and gaming hardware calibrated for champions.</p>
+                
+                <div class="highlight-grid">
+                    <div class="highlight-item">
+                        <h3>ULTRA-LIGHTING-OUT</h3>
+                        <p>The 54g lightweight chassis is engineered for quick reaction times, making fast flicks and precise tracking feel completely weightless.</p>
+                    </div>
+
+                    <div class="highlight-item">
+                        <h3>TOPOGRAPHIC SHELL</h3>
+                        <p>An intricate topographic pattern layout wraps around the mouse palm grip, providing superior tactical feel and a signature Sentinels design aesthetic.</p>
+                    </div>
+
+                    <div class="highlight-item">
+                        <h3>LAG-FREE HYPERSPEED</h3>
+                        <p>Utilizes Razer HyperSpeed Wireless connectivity. Features robust frequency stability and zero interference in packed stadium tournaments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Glassmorphic Feature Cards (6 Cards for Extra Detail) -->
+        <section class="details-section features-grid-section">
+            <div class="section-content-wrapper">
+                <span class="section-eyebrow">MODULE SPECIFICATIONS</span>
+                <h2 class="section-title">BUILT FOR <span class="accent-text">THE STAGE</span></h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="card-icon-container">
+                            <svg class="card-icon" viewBox="0 0 24 24" width="24" height="24">
+                                <rect x="6" y="2" width="12" height="20" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="12" y1="2" x2="12" y2="10" stroke="currentColor" stroke-width="2"/>
+                                <line x1="6" y1="10" x2="18" y2="10" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">54g Ultra-light</h3>
+                        <p class="card-desc">Optimized for maximum speed and control, refined by esports pros to minimize wrist fatigue.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="card-icon-container">
+                            <svg class="card-icon" viewBox="0 0 24 24" width="24" height="24">
+                                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/>
+                                <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+                                <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/>
+                                <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Focus Pro 35K Gen-2</h3>
+                        <p class="card-desc">Industry-leading sensor with intelligent tracking, Motion Sync, and 99.8% resolution accuracy.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="card-icon-container">
+                            <svg class="card-icon" viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">8KHz HyperPolling</h3>
+                        <p class="card-desc">True 8000Hz polling rate for near-zero latency, delivering smoother cursor updates.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="card-icon-container">
+                            <svg class="card-icon" viewBox="0 0 24 24" width="24" height="24">
+                                <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">95-Hour Battery</h3>
+                        <p class="card-desc">Play through tournaments with extended battery performance. Fast USB-C recharge in 1 hour.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="card-icon-container">
+                            <svg class="card-icon" viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M16 18l2-2 4 4M2 12h20M2 12a10 10 0 1020 0 10 10 0 00-20 0z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Gen-3 Optical Switches</h3>
+                        <p class="card-desc">Zero double-clicking issues. Rated for 90-million click lifecycle with 0.2ms actuation speed.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="card-icon-container">
+                            <svg class="card-icon" viewBox="0 0 24 24" width="24" height="24">
+                                <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">26 Height Adjustments</h3>
+                        <p class="card-desc">Fine-tune asymmetric lift-off and landing distances to match your mousepad texture.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3.1: Interactive Component Explorer -->
+        <section class="details-section components-explorer" id="components">
+            <div class="section-content-wrapper">
+                <span class="section-eyebrow">TACTICAL HARDWARE</span>
+                <h2 class="section-title">EXPLORE THE <span class="accent-text">INTERNALS</span></h2>
+                <p class="section-intro-desc">Click on any component tab to view detailed blueprints and hardware capabilities built for champions.</p>
+                
+                <div class="components-tab-container">
+                    <div class="components-tabs">
+                        <button class="tab-btn active" data-tab="sensor">Focus Pro Sensor</button>
+                        <button class="tab-btn" data-tab="switches">Optical Switches</button>
+                        <button class="tab-btn" data-tab="wireless">HyperPolling Wireless</button>
+                        <button class="tab-btn" data-tab="shell">54g Shell Design</button>
+                    </div>
+                    
+                    <div class="components-content">
+                        <div class="tab-content active" id="tab-sensor">
+                            <div class="hardware-spec-layout">
+                                <div class="hardware-info">
+                                    <h3>Focus Pro 35K Optical Sensor Gen-2</h3>
+                                    <p>Experience unmatched tracking accuracy. The industry-leading sensor features intelligent functions such as Smart Tracking and Motion Sync, syncing sensor signals with the exact intervals your PC extracts information, ensuring pixel-perfect flicks.</p>
+                                    <ul class="spec-bullet-list">
+                                        <li><strong>Resolution Accuracy:</strong> 99.8%</li>
+                                        <li><strong>Max Sensitivity:</strong> 35,000 DPI</li>
+                                        <li><strong>Max Speed:</strong> 750 IPS</li>
+                                        <li><strong>Asymmetric Cut-off:</strong> 26 Height Adjustments</li>
+                                    </ul>
+                                </div>
+                                <div class="hardware-blueprint">
+                                    <div class="hud-crosshair"></div>
+                                    <span class="blueprint-tag">MODULE: FOCUS-PRO-35K</span>
+                                    <svg viewBox="0 0 100 100" class="blueprint-svg">
+                                        <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2, 2"/>
+                                        <circle cx="50" cy="50" r="10" fill="none" stroke="var(--accent-color)" stroke-width="2"/>
+                                        <line x1="50" y1="10" x2="50" y2="90" stroke="currentColor" stroke-width="0.5"/>
+                                        <line x1="10" y1="50" x2="90" y2="50" stroke="currentColor" stroke-width="0.5"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="tab-switches">
+                            <div class="hardware-spec-layout">
+                                <div class="hardware-info">
+                                    <h3>Optical Switches Gen-3</h3>
+                                    <p>Built with zero debounce delay, our switches actuate at a blinding 0.2ms speed, leaving no room for double-clicks. Boasting a 90-million click lifecycle, they feel crisp, tactically responsive, and outlast conventional mechanical keys.</p>
+                                    <ul class="spec-bullet-list">
+                                        <li><strong>Actuation Speed:</strong> 0.2 ms (Instantaneous)</li>
+                                        <li><strong>Debounce Delay:</strong> 0 ms</li>
+                                        <li><strong>Durability:</strong> 90 Million Clicks</li>
+                                        <li><strong>Tactility:</strong> Gold-Plated Leaf Contacts</li>
+                                    </ul>
+                                </div>
+                                <div class="hardware-blueprint">
+                                    <div class="hud-crosshair"></div>
+                                    <span class="blueprint-tag">MODULE: SWITCH-OPT-G3</span>
+                                    <svg viewBox="0 0 100 100" class="blueprint-svg">
+                                        <rect x="30" y="30" width="40" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="1"/>
+                                        <rect x="45" y="20" width="10" height="10" fill="var(--accent-color)"/>
+                                        <path d="M 40 50 L 60 50 L 50 65 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="tab-wireless">
+                            <div class="hardware-spec-layout">
+                                <div class="hardware-info">
+                                    <h3>8000Hz HyperPolling Wireless</h3>
+                                    <p>HyperPolling technology polls mouse inputs 8 times faster than standard mice. This translates sensor reporting into extremely fine cursor updates, delivering smoother lines, near-zero tracking latency, and absolute competitive precision.</p>
+                                    <ul class="spec-bullet-list">
+                                        <li><strong>Wireless Polling:</strong> Up to 8000 Hz</li>
+                                        <li><strong>Input Latency:</strong> 0.125 ms (v.s. standard 1ms)</li>
+                                        <li><strong>Connectivity:</strong> HyperSpeed Stable Protocol</li>
+                                        <li><strong>Co-Processor:</strong> Low-power ARM Cortex</li>
+                                    </ul>
+                                </div>
+                                <div class="hardware-blueprint">
+                                    <div class="hud-crosshair"></div>
+                                    <span class="blueprint-tag">MODULE: HYPER-POLL-8K</span>
+                                    <svg viewBox="0 0 100 100" class="blueprint-svg">
+                                        <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" stroke-width="1"/>
+                                        <path d="M 50 20 L 50 40 M 30 50 L 45 50 M 50 60 L 50 80 M 55 50 L 70 50" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="50" cy="50" r="3" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="tab-shell">
+                            <div class="hardware-spec-layout">
+                                <div class="hardware-info">
+                                    <h3>54g Ultra-Lightweight Shell</h3>
+                                    <p>Calibrated specifically for pro gaming setups. We achieved a solid 54-gram weight without resorting to hole cutouts. This creates a fully rigid, ergonomic chassis that fits standard fingertip and claw grips, ensuring quick reaction sweeps.</p>
+                                    <ul class="spec-bullet-list">
+                                        <li><strong>Weight distribution:</strong> Perfectly Centered</li>
+                                        <li><strong>Rigidity:</strong> Flex-Free Structural Ribbing</li>
+                                        <li><strong>Outer Coat:</strong> Matte High-Grip Texture</li>
+                                        <li><strong>Chassis Weight:</strong> 54 grams</li>
+                                    </ul>
+                                </div>
+                                <div class="hardware-blueprint">
+                                    <div class="hud-crosshair"></div>
+                                    <span class="blueprint-tag">MODULE: SHIELD-54G</span>
+                                    <svg viewBox="0 0 100 100" class="blueprint-svg">
+                                        <path d="M50 15 C 35 15, 25 35, 25 60 C 25 80, 35 85, 50 85 C 65 85, 75 80, 75 60 C 75 35, 65 15, 50 15 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+                                        <path d="M50 15 L 50 45 M 25 50 L 75 50" stroke="var(--accent-color)" stroke-width="1" stroke-dasharray="3, 3"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3.2: DPI & Polling Latency Simulator -->
+        <section class="details-section simulator-section" id="simulator">
+            <div class="section-content-wrapper">
+                <span class="section-eyebrow">PERFORMANCE SANDBOX</span>
+                <h2 class="section-title">8KHz HYPERPOLLING <span class="accent-text">SIMULATOR</span></h2>
+                <p class="section-intro-desc">Move your cursor over the test pad below to see how Polling Rate affects precision. Drag sliders to witness real-time tracking lag vs. seamless 8,000Hz updates.</p>
+                
+                <div class="simulator-layout">
+                    <div class="sim-controls">
+                        <div class="sim-slider-group">
+                            <label>
+                                <span>Polling Rate</span>
+                                <span class="sim-val" id="sim-polling-val">8000 Hz</span>
+                            </label>
+                            <input type="range" id="sim-polling" min="125" max="8000" step="125" value="8000">
+                            <div class="sim-desc">Higher polling rate delivers input reporting updates up to 8x faster, eliminating micro-stutters.</div>
+                        </div>
+
+                        <div class="sim-slider-group">
+                            <label>
+                                <span>Cursor DPI (Speed)</span>
+                                <span class="sim-val" id="sim-dpi-val">1600 DPI</span>
+                            </label>
+                            <input type="range" id="sim-dpi" min="400" max="3200" step="400" value="1600">
+                        </div>
+
+                        <div class="sim-metrics">
+                            <div class="metric-box">
+                                <span class="metric-lbl">Latency (ms)</span>
+                                <span class="metric-val" id="sim-latency">0.125 ms</span>
+                            </div>
+                            <div class="metric-box">
+                                <span class="metric-lbl">Reports / Sec</span>
+                                <span class="metric-val" id="sim-reports">8,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sim-pad-wrapper">
+                        <canvas id="sim-canvas"></canvas>
+                        <div class="sim-pad-overlay">
+                            <span>MOVE MOUSE HERE TO TEST SMOOTHNESS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3.3: Weight Comparison Simulator -->
+        <section class="details-section weight-comparison-section" id="weight-scale">
+            <div class="section-content-wrapper">
+                <span class="section-eyebrow">PHYSICAL DYNAMICS</span>
+                <h2 class="section-title">THE WEIGHT OF <span class="accent-text">VICTORY</span></h2>
+                <p class="section-intro-desc">How light is 54 grams? Select items below to place them on the balance scale and compare their weights to the ultra-lightweight Viper V3 Pro.</p>
+                
+                <div class="weight-simulator-layout">
+                    <div class="scale-item-picker">
+                        <button class="scale-item-btn" data-weight="85" data-name="Standard Gaming Mouse">Standard Mouse (85g)</button>
+                        <button class="scale-item-btn" data-weight="58" data-name="Tennis Ball">Tennis Ball (58g)</button>
+                        <button class="scale-item-btn" data-weight="50" data-name="Organic Egg">Organic Egg (50g)</button>
+                        <button class="scale-item-btn" data-weight="6" data-name="Standard Credit Card">Credit Card (6g)</button>
+                    </div>
+
+                    <div class="scale-display-area">
+                        <div class="scale-graphic-container">
+                            <div class="scale-pillar"></div>
+                            <div class="scale-beam" id="scale-beam">
+                                <div class="scale-pan left">
+                                    <span class="pan-label" id="pan-left-name">Viper V3 Pro</span>
+                                    <span class="pan-weight">54g</span>
+                                </div>
+                                <div class="scale-pan right">
+                                    <span class="pan-label" id="pan-right-name">Egg</span>
+                                    <span class="pan-weight" id="pan-right-weight">50g</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scale-verdict" id="scale-verdict">
+                            The Viper V3 Pro (54g) is heavier than the Egg (50g).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3.4: Sentinels Pro Setups Configurator -->
+        <section class="details-section pro-setups-section" id="setups">
+            <div class="section-content-wrapper">
+                <span class="section-eyebrow">CHAMPIONS CONFIG</span>
+                <h2 class="section-title">SENTINELS PRO <span class="accent-text">SETUPS</span></h2>
+                <p class="section-intro-desc">Review the exact game setups and sensitivities of the Sentinels VALORANT roster. Click a card to apply their branding theme and load their mouse parameters.</p>
+                
+                <div class="pro-grid">
+                    <div class="pro-card" data-player="tenz" data-color="purple">
+                        <div class="pro-card-glow"></div>
+                        <div class="pro-header">
+                            <span class="pro-team">SEN</span>
+                            <h3>TenZ</h3>
+                            <span class="pro-status">ACTIVE</span>
+                        </div>
+                        <div class="pro-specs">
+                            <div class="pro-spec-row">
+                                <span>DPI</span>
+                                <strong>1600</strong>
+                            </div>
+                            <div class="pro-spec-row">
+                                <span>In-Game Sens</span>
+                                <strong>0.175</strong>
+                            </div>
+                            <div class="pro-spec-row">
+                                <span>Polling Rate</span>
+                                <strong>8000 Hz</strong>
+                            </div>
+                            <div class="pro-spec-row">
+                                <span>Theme Color</span>
+                                <strong class="purple-txt">CYBERPURPLE</strong>
+                            </div>
+                        </div>
+                        <button class="btn-load-config">LOAD CONFIG</button>
+                    </div>
+
+                    <div class="pro-card" data-player="zellsis" data-color="green">
+                        <div class="pro-card-glow"></div>
+                        <div class="pro-header">
+                            <span class="pro-team">SEN</span>
+                            <h3>Zellsis</h3>
+                            <span class="pro-status">ACTIVE</span>
+                        </div>
+                        <div class="pro-specs">
+                            <div class="pro-spec-row">
+                                <span>DPI</span>
+                                <strong>800</strong>
+                            </div>
+                            <div class="pro-spec-row">
+                                <span>In-Game Sens</span>
+                                <strong>0.35</strong>
+                            </div>
+                            <div class="pro-spec-row">
+                                <span>Polling Rate</span>
+                                <strong>4000 Hz</strong>
+                            </div>
+                            <div class="pro-spec-row">
+                                <span>Theme Color</span>
+                                <strong class="green-txt">RAZER GREEN</strong>
+                            </div>
+                        </div>
+                        <button class="btn-load-config">LOAD CONFIG</button>
+                    </div>
+
+                    <div class="pro-card" data-player="johnqt" data-color="gold">
+                        <div class="pro-card-glow"></div>
+                        <div class="pro-header">
+                            <span class="pro-team">SEN</span>
+                            <h3>johnqt</h3>
+                            <span class="pro-status">IGL</span>
+                        </div>
+                        <div class="pro-specs">
+                            <div class="pro-spec-row">
+                                <span>DPI</span>
+                                <strong>1600</strong>
+                            </div>
+                            <div class="pro-spec-row">
+                                <span>In-Game Sens</span>
+                                <strong>0.20</strong>
+                            </div>
+                            <div class="pro-spec-row">
+                                <span>Polling Rate</span>
+                                <strong>8000 Hz</strong>
+                            </div>
+                            <div class="pro-spec-row">
+                                <span>Theme Color</span>
+                                <strong class="gold-txt">CHAMPION GOLD</strong>
+                            </div>
+                        </div>
+                        <button class="btn-load-config">LOAD CONFIG</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Specifications Table -->
+        <section class="details-section specs-section" id="specs">
+            <div class="section-content-wrapper">
+                <h2 class="specs-title">TECHNICAL <span class="accent-text">SPECIFICATIONS</span></h2>
+                
+                <table class="specs-table">
+                    <tbody>
+                        <tr>
+                            <td class="spec-label">FORM FACTOR</td>
+                            <td class="spec-value">Right-handed Symmetrical</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">CONNECTIVITY</td>
+                            <td class="spec-value">Razer HyperSpeed Wireless / Wired</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">BATTERY LIFE</td>
+                            <td class="spec-value">Up to 95 hours (at 1000Hz)</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">SENSOR</td>
+                            <td class="spec-value">Focus Pro 35K Optical Sensor Gen-2</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">MAX SENSITIVITY (DPI)</td>
+                            <td class="spec-value">35,000</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">MAX SPEED (IPS)</td>
+                            <td class="spec-value">750</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">MAX ACCELERATION (G)</td>
+                            <td class="spec-value">70</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">PROGRAMMABLE BUTTONS</td>
+                            <td class="spec-value">6</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">SWITCH TYPE</td>
+                            <td class="spec-value">Optical Mouse Switches Gen-3</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">APPROXIMATE WEIGHT</td>
+                            <td class="spec-value highlight-red">54 g</td>
+                        </tr>
+                        <tr>
+                            <td class="spec-label">CLICK LIFECYCLE</td>
+                            <td class="spec-value">90 Million Clicks</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 5: FAQs Section (Rich Details Add-on) -->
+        <section class="details-section faq-section" id="faq">
+            <div class="section-content-wrapper">
+                <h2 class="section-title">FREQUENTLY ASKED <span class="accent-text">QUESTIONS</span></h2>
+                
+                <div class="accordion-container">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>What makes the Sentinels Edition different from the standard Viper V3 Pro?</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>The Razer Viper V3 Pro Sentinels Edition features the iconic brand red and topographic print aesthetic designed in official collaboration with the Sentinels esports franchise. It includes the exact high-end specifications of the standard model, packaged in a custom co-branded retail box.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>Does it include the Razer HyperPolling Wireless Dongle?</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Yes, the mouse comes packaged with the Razer HyperPolling Wireless Dongle, allowing you to achieve true wireless polling rates up to 8000Hz out of the box without purchasing additional accessories.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>How does the battery life scale at higher polling rates?</span>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>At standard 1000Hz polling rate, the battery lasts up to 95 hours. Running at 8000Hz polling rate updates the sensor telemetry faster for maximum competitive advantage, scaling the runtime to approximately 17 hours of continuous gaming.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="product-footer">
+            <div class="section-content-wrapper">
+                <p class="copyright">© 2026 RAZER INC. ALL RIGHTS RESERVED. OFFICIAL SENTINELS COLLABORATION.</p>
+                <div class="footer-links">
+                    <a href="#">SUPPORT</a>
+                    <span class="link-separator">|</span>
+                    <a href="#">PRIVACY POLICY</a>
+                    <span class="link-separator">|</span>
+                    <a href="#">TERMS OF USE</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Floating Interactive Control Dashboard -->
+    <div class="control-dashboard-trigger" id="dashboard-trigger">
+        <span class="trigger-icon">⚙</span>
+        <span class="trigger-label">Tweak Settings</span>
+    </div>
+
+    <div class="control-dashboard" id="dashboard">
+        <div class="dashboard-header">
+            <h3>KINETIC SETTINGS</h3>
+            <button class="close-btn" id="close-dashboard">✕</button>
+        </div>
+        
+        <div class="dashboard-body">
+            <div class="control-group">
+                <label for="inertia-slider">
+                    <span>Inertia (Scroll Smoothing)</span>
+                    <span class="value-display" id="inertia-val">0.08</span>
+                </label>
+                <div class="slider-wrapper">
+                    <span class="slider-lbl min">Raw</span>
+                    <input type="range" id="inertia-slider" min="0.01" max="0.5" step="0.01" value="0.08">
+                    <span class="slider-lbl max">Buttery</span>
+                </div>
+                <div class="control-desc">Controls the canvas frame transition lag/damping. Lower values create a silky floating effect.</div>
+            </div>
+
+            <div class="control-group">
+                <label>Playback Mode</label>
+                <div class="toggle-buttons">
+                    <button class="toggle-btn active" id="mode-scroll">Manual Scroll</button>
+                    <button class="toggle-btn" id="mode-auto">Auto-Loop Demo</button>
+                </div>
+            </div>
+
+            <div class="control-group" id="speed-group" style="display: none;">
+                <label for="speed-slider">
+                    <span>Auto-Play Speed</span>
+                    <span class="value-display" id="speed-val">1.0x</span>
+                </label>
+                <input type="range" id="speed-slider" min="0.1" max="3" step="0.1" value="1">
+            </div>
+
+            <div class="control-group">
+                <label>Visual Enhancements</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="vignette-toggle" checked>
+                        <span class="checkmark"></span>
+                        Vignette Overlay (Cinematic contrast)
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="smoothing-toggle" checked>
+                        <span class="checkmark"></span>
+                        Canvas Image Smoothing
+                    </label>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Branding Theme</label>
+                <div class="theme-selector">
+                    <button class="theme-dot active" data-theme="red" style="background-color: #ff003c;" title="Sentinels Red"></button>
+                    <button class="theme-dot" data-theme="green" style="background-color: #4caf50;" title="Razer Green"></button>
+                    <button class="theme-dot" data-theme="gold" style="background-color: #ffb300;" title="Championship Gold"></button>
+                    <button class="theme-dot" data-theme="purple" style="background-color: #e040fb;" title="Cyberpunk Purple"></button>
+                </div>
+            </div>
+
+            <div class="dashboard-footer">
+                <div class="stats-row">
+                    <span class="stats-lbl">Active Frame:</span>
+                    <span class="stats-val" id="frame-counter">0000 / 0191</span>
+                </div>
+                <div class="stats-row">
+                    <span class="stats-lbl">FPS Target:</span>
+                    <span class="stats-val fps-val">60Hz</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sliding Navigation Overlay Menu -->
+    <div class="overlay-menu" id="overlay-menu">
+        <div class="menu-container">
+            <button class="menu-close-btn" id="overlay-menu-close" aria-label="Close Menu">✕</button>
+            <nav class="menu-nav">
+                <a href="#" class="menu-link" data-target="hero">SHOWCASE</a>
+                <a href="#" class="menu-link" data-target="branding">SENTINELS DESIGN</a>
+                <a href="#" class="menu-link" data-target="components">TACTICAL HARDWARE</a>
+                <a href="#" class="menu-link" data-target="simulator">TACTICAL SIMULATOR</a>
+                <a href="#" class="menu-link" data-target="weight-scale">WEIGHT OF VICTORY</a>
+                <a href="#" class="menu-link" data-target="setups">PRO SETUPS</a>
+                <a href="#" class="menu-link" data-target="specs">SPECIFICATIONS</a>
+                <a href="#" class="menu-link" data-target="faq">FAQ</a>
+            </nav>
+            <div class="menu-footer-brand">
+                <span class="logo-text-sen">SENTINELS</span>
+                <span class="logo-divider">|</span>
+                <span class="logo-text-razer">RAZER</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
